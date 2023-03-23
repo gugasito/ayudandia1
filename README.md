@@ -1,2 +1,2 @@
-# ayudandia1
-ejercicio de sismos
+# Ayudandia1
+Ejercicio de sismos
