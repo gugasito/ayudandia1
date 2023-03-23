@@ -54,12 +54,21 @@ public class Sismos {
                 agregarSismos(sismos);
                 menu(sismos);
             case 2:
+                if (revisar(sismos)) {
+                    menu(sismos);
+                }
                 System.out.println("El sismo de mayor magnitud es de: " + sismoMayor(sismos) + " grados");
                 menu(sismos);
             case 3:
+                if (revisar(sismos)) {
+                    menu(sismos);
+                }
                 System.out.println("La cantidad de sismos mayores o iguales a 5.0 son: " + contarSis(sismos));
                 menu(sismos);
             case 4:
+                if (revisar(sismos)) {
+                    menu(sismos);
+                }
                 sms(sismos);
                 menu(sismos);
             case 5:
@@ -103,5 +112,14 @@ public class Sismos {
             }
         }
 
+    }
+
+    public static boolean revisar(double[][] sismos) {
+        boolean vacio = false;
+        if (sismos[0][0] == 0) {
+            vacio = true;
+            System.out.println("La matriz está vacia, favor ingresar datos");
+        }
+        return vacio;
     }
 }
